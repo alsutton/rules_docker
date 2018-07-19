@@ -356,7 +356,7 @@ _attrs = dict(_layer.attrs.items() + {
     # available to the developer without having to poke around with
     # docker inspect.
     "docker_run_flags": attr.string(
-        default = "-i --rm --network=host",
+        default = "-i --rm --network=bridge -P",
     ),
     "user": attr.string(),
     "labels": attr.string_dict(),
